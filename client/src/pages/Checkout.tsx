@@ -315,7 +315,7 @@ export default function Checkout() {
                         <FormItem>
                           <FormLabel className="text-white">How Many Products</FormLabel>
                           <FormControl>
-                            <Input type="number" value={field.value} onChange={(e) => field.onChange(e.target.valueAsNumber)} className="bg-white/5 border-white/10" />
+                            <Input type="number" value={typeof field.value === "number" ? field.value : 1} onChange={(e) => field.onChange(Number(e.target.value))} className="bg-white/5 border-white/10" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>

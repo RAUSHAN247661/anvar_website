@@ -323,7 +323,7 @@ function broadcast(data: any) {
 }
 if (!isServerless && server) {
   wss = new WebSocketServer({ server });
-  wss.on("connection", (ws) => {
+  wss.on("connection", (ws: WebSocket) => {
     ws.send(JSON.stringify({ type: "hello" }));
   });
 }

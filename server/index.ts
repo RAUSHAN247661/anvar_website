@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(
   cors({
-    origin: [/http:\/\/localhost:5000$/, /http:\/\/127\.0\.0\.1:5000$/, /http:\/\/localhost:5001$/, /http:\/\/127\.0\.0\.1:5001$/, /http:\/\/localhost:5002$/, /http:\/\/127\.0\.0\.1:5002$/],
+    origin: process.env.VERCEL ? true : [/http:\/\/localhost:5000$/, /http:\/\/127\.0\.0\.1:5000$/, /http:\/\/localhost:5001$/, /http:\/\/127\.0\.0\.1:5001$/, /http:\/\/localhost:5002$/, /http:\/\/127\.0\.0\.1:5002$/],
     credentials: true,
   })
 );

@@ -4,10 +4,9 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --port 5000 --strictPort",
-    "server": "tsx server/index.ts",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5000 --strictPort"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
